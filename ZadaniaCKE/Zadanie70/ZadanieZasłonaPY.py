@@ -1,3 +1,5 @@
+import math
+
 def FuncF(x): # f(10) = 19 * 61 / 125
     R = (x*x*x*x) / 500 - (x*x) / 200 - 3 / 250
     return R
@@ -35,8 +37,22 @@ def obliczenieCalki():
     result = rectangle - sumFigure
     print(result)
     # Koniec 70.1
+def obwod(): # Początek 70.2 nie jestem pewny czy ten kod działa
+    LeftX = 2
+    RightX = 10
 
-    # Początek 70.2
+    E = 1000
+
+    var = (RightX - LeftX) / E
+    wynik = 0
+
+    for i in range(1, E + 1):
+        xi_min = LeftX + (i - 1) * var # Czuje, że to napewno jest źle
+        xi = LeftX + i * var
+
+        y1_min = FuncF(xi_min)
+        y1 = FuncF(xi)
+
 
 
 obliczenieCalki()
