@@ -24,3 +24,16 @@ def horner(liczba, x):
 
 print(horner("11010", 2))
 
+
+#Zmiana liczby z systemu 10 na inny
+#liczba to int, x to int
+#x to sytem
+def DecToAll(liczba, x):
+    wynik = ""
+    while liczba > 0:
+        wynik = str(liczba%x) + wynik
+        liczba = liczba // x
+
+    return wynik
+
+print(DecToAll(26, 2))
